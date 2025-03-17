@@ -8,7 +8,7 @@
         },
         {
             "method": "GET",
-            "url": "/services/data/v46.0/query/?q=SELECT+Id+FROM+ConnectedApplication+WHERE+Name+=+'LitifyMDAPI'",
+            "url": "/services/data/v46.0/query/?q=SELECT+Id+FROM+ConnectedApplication+WHERE+Name+=+'Custom_Litify_MDAPI'",
             "referenceId": "conApp"
         },
         {

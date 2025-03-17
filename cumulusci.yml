@@ -31,7 +31,7 @@ tasks:
         class_path: cumulusci.tasks.sfdx.SFDXOrgTask
         group: LitifyMDAPI
         options:
-            command: "project retrieve start -k unpackaged/config/litify-mdapi/package.xml -r unpackaged/config/litify-mdapi/temp --json --zipfilename connectedApp.zip"
+            command: "project retrieve start --manifest unpackaged/config/litify-mdapi/package.xml --target-metadata-dir unpackaged/config/litify-mdapi/temp --json --zip-file-name connectedApp.zip"
 
     unzip_connected_app:
         description: Unzip a file and optionally remove the zip file
@@ -61,7 +61,7 @@ tasks:
         description: Extract a value from XML
         class_path: tasks.extract_value_from_xml.ExtractValueFromXML
         options:
-            xml_file_path: unpackaged/config/litify-mdapi/src/connectedApps/LitifyMDAPI.connectedApp-meta.xml
+            xml_file_path: unpackaged/config/litify-mdapi/src/connectedApps/Custom_Litify_MDAPI.connectedApp-meta.xml
             tag: consumerKey
 
     update_consumer_key:
