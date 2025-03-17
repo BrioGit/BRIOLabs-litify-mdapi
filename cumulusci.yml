@@ -31,7 +31,7 @@ tasks:
         class_path: cumulusci.tasks.sfdx.SFDXOrgTask
         group: LitifyMDAPI
         options:
-            command: "force:mdapi:retrieve -k unpackaged/config/litify-mdapi/package.xml -r unpackaged/config/litify-mdapi/temp --json --zipfilename connectedApp.zip"
+            command: "sf project retrieve start --manifest unpackaged/config/litify-mdapi/package.xml --target-metadata-dir unpackaged/config/litify-mdapi/temp --json --zip-file-name connectedApp.zip"
 
     unzip_connected_app:
         description: Unzip a file and optionally remove the zip file
