@@ -5,7 +5,6 @@
     <oauthConfig>
         <callbackUrl>DOMAIN/services/authcallback/Custom_Litify_MDAPI</callbackUrl>
         <!--<consumerSecret>OTA4MjM0cmhzYmVma3VzZSFZYXlUZXN0ITkwODIzNHJoc2JlZmt1c2U=</consumerSecret >-->
-        <consumerSecret></consumerSecret >
         <isAdminApproved>true</isAdminApproved>
         <isConsumerSecretOptional>false</isConsumerSecretOptional>
         <isIntrospectAllTokens>false</isIntrospectAllTokens>
