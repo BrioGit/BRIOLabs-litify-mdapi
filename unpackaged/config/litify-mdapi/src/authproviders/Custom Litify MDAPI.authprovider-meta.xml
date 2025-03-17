@@ -4,7 +4,7 @@
     <consumerKey>CONSUMER_KEY</consumerKey>
     <consumerSecret>OTA4MjM0cmhzYmVma3VzZSFZYXlUZXN0ITkwODIzNHJoc2JlZmt1c2U=</consumerSecret>
     <defaultScopes>full refresh_token offline_access</defaultScopes>
-    <friendlyName>LitifyMDAPI</friendlyName>
+    <friendlyName>Custom_Litify_MDAPI</friendlyName>
     <includeOrgIdInIdentifier>true</includeOrgIdInIdentifier>
     <providerType>Salesforce</providerType>
     <sendAccessTokenInHeader>false</sendAccessTokenInHeader>
