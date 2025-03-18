@@ -46,11 +46,7 @@ Setup Test Data
     
     # Get instance URL
     ${instance_url} =           Get From Dictionary         ${ORG_INFO}    instance_url
-    Set Suite Variable          ${INSTANCE_URL}            ${instance_url}
-
-    # Set Username and Password
-    ${SF_USERNAME} =             Get From Dictionary         ${ORG_INFO}    username
-    Set Suite Variable               ${username}               ${SF_USERNAME}  
+    Set Suite Variable          ${INSTANCE_URL}            ${instance_url} 
 
 Navigate To Named Credentials
     [Documentation]             Navigates to the Named Credentials home page.
@@ -73,7 +69,7 @@ Click Save
     Wait Until Page Contains Element
     ...                         ${save_button}
     Click Element               ${save_button} 
-    Wait Until Loading Is Complete
+    Wait Until Page Contains Element
     ...                         ${username_field}         timeout=15s   
 
 
@@ -83,9 +79,8 @@ Login as User
     ${access_token} =           Get From Dictionary        ${ORG_INFO}    access_token
     Set Suite Variable          ${ACCESS_TOKEN}            ${access_token}
     # Setting Username and Password
-    Breakpoint 
-    Input Text                  ${username_field}            ${username}
-    ...                         Clear = True
+    Input Text                  ${username_field}            ${SF_USERNAME}
+    ...                          Clear = True
     Input Text                  ${password_field}            ${SF_PASSWORD}
     Click Element               ${login_button}
     Wait Until Page Contains Element 
