@@ -68,7 +68,8 @@ Click Save
     Select Frame                ${iframe}
     Wait Until Page Contains Element
     ...                         ${save_button}
-    Click Element               ${save_button}     
+    Click Element               ${save_button} 
+    Sleep                       15s    
     Wait Until Page Contains Element
     ...                         ${username_field}          timeout=15s
 
