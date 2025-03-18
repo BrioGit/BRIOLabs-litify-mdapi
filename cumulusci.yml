@@ -46,7 +46,7 @@ tasks:
         class_path: cumulusci.tasks.sfdx.SFDXBaseTask
         group: LitifyMDAPI
         options:
-            command: "project convert source -r unpackaged/config/litify-mdapi/temp/unpackaged/connectedApps -d unpackaged/config/litify-mdapi/temp/"
+            command: "project convert source -r unpackaged/config/litify-mdapi/connectedApps -d unpackaged/config/litify-mdapi/temp/"
 
     move_connected_app:
         description: Move Converted Connected App to src directory
