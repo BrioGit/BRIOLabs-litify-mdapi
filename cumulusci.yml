@@ -112,11 +112,7 @@ tasks:
         options:
             suites: robot/Litify/tests/edit_and_save_named_credential.robot
             outputdir: robot/Litify/results
-            exclude: unstable
-            vars:
-                - "BROWSER:chrome"
-                - "BROWSER_OPTIONS:--headless=new --no-sandbox --incognito --disable-gpu --user-data-dir"
-
+            
     install_chromedriver:
         class_path: tasks.install_chromedriver.InstallChromeDriver
 
