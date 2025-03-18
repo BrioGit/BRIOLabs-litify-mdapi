@@ -79,7 +79,7 @@ Login as User
     Set Suite Variable          ${ACCESS_TOKEN}            ${access_token}
     # Setting Username and Password
     Input Text                  ${username_field}            ${SF_USERNAME}
-    ...                         Clear  =                     True
+    ...                         Clear = True
     Input Text                  ${password_field}            ${SF_PASSWORD}
     Click Element               ${login_button}
     Wait Until Page Contains Element 
