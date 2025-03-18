@@ -69,8 +69,9 @@ Click Save
     Wait Until Page Contains Element
     ...                         ${save_button}
     Click Element               ${save_button} 
-    Wait Until Page Contains Element
-    ...                         ${username_field}         timeout=15s   
+    Sleep                       15s
+    #Wait Until Page Contains Element
+    #...                         ${username_field}         timeout=15s   
 
 
 Login as User
@@ -79,6 +80,7 @@ Login as User
     ${access_token} =           Get From Dictionary        ${ORG_INFO}    access_token
     Set Suite Variable          ${ACCESS_TOKEN}            ${access_token}
     # Setting Username and Password
+    Breakpoint
     Input Text                  ${username_field}            ${SF_USERNAME}
     ...                          Clear = True
     Input Text                  ${password_field}            ${SF_PASSWORD}
