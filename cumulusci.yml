@@ -55,7 +55,7 @@ tasks:
             source_path: unpackaged/config/litify-mdapi/temp/connectedApps
             destination_path: unpackaged/config/litify-mdapi/src/connectedApps
             cleanup_path: unpackaged/config/litify-mdapi/temp
-            remove_cleanup: true
+            remove_cleanup: false
 
     extract_consumer_key:
         description: Extract a value from XML
