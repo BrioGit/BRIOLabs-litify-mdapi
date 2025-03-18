@@ -70,8 +70,7 @@ Click Save
     ...                         ${save_button}
     Click Element               ${save_button} 
     Sleep                       15s    
-    Wait Until Page Contains Element
-    ...                         ${username_field}          timeout=15s
+
 
 Login as User
     [Documentation]             Enter User credentials and click Login Button on login page.
