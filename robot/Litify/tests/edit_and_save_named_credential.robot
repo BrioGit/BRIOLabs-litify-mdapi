@@ -27,7 +27,7 @@ ${named_credential} =           //setup_platform_namedcredential-credential-tabl
 ${edit_button} =                //input[@value='Edit']
 ${save_button} =                //input[@value='Save']
 ${confirm_button} =             //input[@value='Confirm']
-${username_field} =             //input[@id="username"]
+${username_field} =             //input[@id='username']
 ${password_field} =             //input[@id='password']
 ${login_button} =               //input[@id='Login']
 ${iframe}                       //*[@id="setupComponent"]/div/div/div/force-aloha-page/div/iframe
@@ -47,6 +47,10 @@ Setup Test Data
     # Get instance URL
     ${instance_url} =           Get From Dictionary         ${ORG_INFO}    instance_url
     Set Suite Variable          ${INSTANCE_URL}            ${instance_url}
+
+    # Set Username and Password
+    ${SF_USERNAME} =             Get From Dictionary         ${ORG_INFO}    username
+    Set Suite Variable               ${username}               ${SF_USERNAME}  
 
 Navigate To Named Credentials
     [Documentation]             Navigates to the Named Credentials home page.
@@ -69,7 +73,8 @@ Click Save
     Wait Until Page Contains Element
     ...                         ${save_button}
     Click Element               ${save_button} 
-    Sleep                       15s    
+    Wait Until Loading Is Complete
+    ...                         ${username_field}         timeout=15s   
 
 
 Login as User
@@ -78,7 +83,8 @@ Login as User
     ${access_token} =           Get From Dictionary        ${ORG_INFO}    access_token
     Set Suite Variable          ${ACCESS_TOKEN}            ${access_token}
     # Setting Username and Password
-    Input Text                  ${username_field}            ${SF_USERNAME}
+    Breakpoint 
+    Input Text                  ${username_field}            ${username}
     ...                         Clear = True
     Input Text                  ${password_field}            ${SF_PASSWORD}
     Click Element               ${login_button}
