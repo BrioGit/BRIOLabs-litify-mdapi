@@ -52,7 +52,7 @@ tasks:
         description: Move Converted Connected App to src directory
         class_path: tasks.move_and_cleanup.MoveAndCleanup
         options:
-            source_path: unpackaged/config/litify-mdapi/temp
+            source_path: unpackaged/config/litify-mdapi/temp/connectedApps
             destination_path: unpackaged/config/litify-mdapi/src/connectedApps
             cleanup_path: unpackaged/config/litify-mdapi/temp
             remove_cleanup: true
