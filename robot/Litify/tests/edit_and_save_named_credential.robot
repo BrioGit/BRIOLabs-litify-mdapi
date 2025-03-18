@@ -27,7 +27,7 @@ ${named_credential} =           //setup_platform_namedcredential-credential-tabl
 ${edit_button} =                //input[@value='Edit']
 ${save_button} =                //input[@value='Save']
 ${confirm_button} =             //input[@value='Confirm']
-${username_field} =             text:Username
+${username_field} =             id:username
 ${password_field} =             //input[@id='password']
 ${login_button} =               //input[@id='Login']
 ${iframe}                       //*[@id="setupComponent"]/div/div/div/force-aloha-page/div/iframe
