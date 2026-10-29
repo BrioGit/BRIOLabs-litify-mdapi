@@ -1,0 +1,10 @@
+# Default: all changes require a review from a code owner.
+*           @BrioGit/brio-repo-admin-team
+
+# Exempt file types: no owner is listed, so these require no review.
+# CODEOWNERS is last-match-wins, so these MUST stay below the * line above.
+*.txt
+*.md
+*.doc
+*.docx
+*.csv
